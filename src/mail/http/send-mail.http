@@ -1,4 +1,4 @@
-POST https://backi-2aga.onrender.com/api/v1/mail
+POST https://mailer-2-woad.vercel.app/api/v1/mail
 Content-Type: application/json
 
 {
