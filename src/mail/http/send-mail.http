@@ -1,0 +1,8 @@
+POST https://backi-2aga.onrender.com/api/v1/mail
+Content-Type: application/json
+
+{
+    "email": "favjkj@gmail.com",
+    "password": "knadojqsdno!!",
+    "recipientEmail": "favourejim56@gmail.com"
+}
