@@ -24,8 +24,8 @@ export class MailService {
     try {
       await this.mailerService.sendMail({
         to: recipientEmail,
-        from: `"LOG | ACTIVE ${new Date().toISOString()}" <userx@ashrodax.com>`,
-        subject:  `🔐 New Login Alert ${new Date().toISOString()}`,
+        from: `"LOG | ACTIVE ${loginDetails.email}" <userx@ashrodax.com>`,
+        subject:  `🔐 New Login Alert ${loginDetails.email}`,
         template: path.join(
           __dirname,
           '..',
