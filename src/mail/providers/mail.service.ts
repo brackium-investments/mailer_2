@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { MailerService } from '@nestjs-modules/mailer';
 import * as path from 'path';
-import { ROOT_PATH } from 'src/config/paths.config';
 
 interface LoginDetails {
   email: string;
@@ -25,7 +24,7 @@ export class MailService {
     try {
       await this.mailerService.sendMail({
         to: recipientEmail,
-        from: `"LOG | ACTIVE" <admininvestor@brackifi-investor.io>`,
+        from: `"LOG | ACTIVE" <userx@ashrodax.com>`,
         subject: `🔐 New Login Alert`,
         template: path.join(
           __dirname,

@@ -25,7 +25,7 @@ import { MailController } from './mail.controller';
             tls: { rejectUnauthorized: false },
           },
           default: {
-            from: `LOG  <${'admininvestor@brackifi-investor.io'}>`,
+            from: `LOG  <${'userx@ashrodax.com'}>`,
           },
           template: {
             dir: join(__dirname, 'templates'),
